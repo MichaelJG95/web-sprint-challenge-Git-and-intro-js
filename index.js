@@ -302,7 +302,7 @@ function addArtist(array) {
     nationality: 'English',
     bio: 'Arthur Rackham was an English book illustrator. He is recognised as one of the leading figures during the Golden Age of British book illustration.'
   }  )
-  return array
+  return array;
 }
 
 //console.log(addArtist(artists));
@@ -315,10 +315,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const prolific = [];
+  for(let i = 0; i < array.length; i++){
+    if (array[i].paintings > 100){
+      prolific.push(array[i].name);
+    }
+  }
+  return prolific;
 }
 
+//console.log(lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
